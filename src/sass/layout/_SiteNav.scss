@@ -1,0 +1,31 @@
+.navbar {
+  font-family: $main-font;
+  font-size: 1.8rem;
+  background-color: $page-border;
+}
+.BeautyShop {
+  font-size: 2rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-left: 15rem;
+  font-weight: 800;
+  color: $main-color !important;
+}
+
+.navbar a:hover,
+a:active {
+  color: $hover-color;
+  font-family: "Dancing Script", cursive;
+  display: inline-block;
+  animation: pulse;
+  animation-duration: 1s;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+.iconeHover:hover {
+  display: inline-block;
+  animation: pulse;
+  animation-duration: 1s;
+}

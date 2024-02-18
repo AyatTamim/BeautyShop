@@ -1,0 +1,22 @@
+.lilo3746-toggle {
+  display: grid;
+  grid-template-columns: auto 0px;
+  background-color: rgb(218, 92, 139);
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+  cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 1.5px 1.5px rgb(218, 92, 139);
+}
+
+.lilo3746-toggle-image {
+  max-width: 70px;
+  max-height: 40px;
+}

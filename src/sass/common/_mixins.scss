@@ -1,0 +1,98 @@
+@mixin textAlign($value) {
+  text-align: $value;
+}
+@mixin border($value) {
+  border: $value solid;
+}
+@mixin border_radius($value) {
+  border-radius: $value;
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  -o-border-radius: $value;
+}
+@mixin vertical_margin(
+  $valueOne: 50px,
+  $valueTwo: 0px,
+  $valueThree: 50px,
+  $valueFour: 0px
+) {
+  margin-top: $valueOne;
+  margin-left: $valueTwo;
+  margin-bottom: $valueThree;
+  margin-right: $valueFour;
+}
+@mixin vertical_padding(
+  $valueOne: 50px,
+  $valueTwo: 0px,
+  $valueThree: 50px,
+  $valueFour: 0px
+) {
+  padding-top: $valueOne;
+  padding-left: $valueTwo;
+  padding-bottom: $valueThree;
+  padding-right: $valueFour;
+}
+@mixin mirror_verticalmargin(
+  $valueOne: -150px,
+  $valueTwo: 0px,
+  $valueThree: 0px,
+  $valueFour: 0px
+) {
+  margin-top: $valueOne;
+  margin-left: $valueTwo;
+  margin-bottom: $valueThree;
+  margin-right: $valueFour;
+}
+@mixin ovalbutton_hovercase {
+  color: white;
+  background-color: $main-color;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  text-transform: capitalize;
+  @include border(0px #d7d5e9);
+  @include border_radius(20px);
+  transition: background-color 1s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  }
+@mixin oval_button {
+  color: #645f88;
+  text-transform: capitalize;
+  background-color: white;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  text-transform: capitalize;
+  @include border(0px #d7d5e9);
+  @include border_radius(0rem);
+  text-align: center;
+  }
+
+@mixin squaredbutton_hovercase {
+  color: white;
+  background-color: $main-color;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-transform: capitalize;
+  @include border(1px #d7d5e9);
+  @include border_radius(8px);
+  transition: background-color 1s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+ }
+@mixin squared_button {
+  color: #645f88;
+  background-color: white;
+  padding: 0.6rem 0rem 0.6rem 1rem;
+  text-transform: capitalize;
+  @include border(0px #d7d5e9);
+  @include border_radius(0px);
+  text-align: center;
+   }
+
+@mixin horizotal_line {
+  color: #e9e8f576;
+  border: 1px solid;
+}
+@mixin m-dash {
+  color: $main-color;
+  width: 1cm;
+  border: 2px solid;
+}

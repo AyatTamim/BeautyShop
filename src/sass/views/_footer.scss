@@ -1,0 +1,42 @@
+.footerStyle {
+  background-color: $page-border;
+}
+a {
+  color: black;
+  text-decoration: none !important;
+}
+a:hover {
+  color: $hover-color;
+}
+
+.footerLogo {
+  color: $main-color;
+  font-family: $main-font;
+}
+
+.socialMedia {
+  display: flex;
+  column-gap: 20px;
+  font-size: 1.7rem;
+  color: $main-color;
+}
+
+.form-control:focus {
+  color: $main-color;
+  background-color: white;
+  border-color: $main-color;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem $hover-color;
+}
+.btn-success {
+  background-color: rgb(218, 92, 139) !important;
+  border-color: rgb(218, 92, 139) !important;
+}
+.design {
+  margin-top: -0.5rem;
+  background-color: #1a1717;
+  color: $main-color;
+}
+.designOne {
+  // padding-top: 0.5rem;
+}

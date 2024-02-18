@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Gluten:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import "./common/variables";
+@import "./views/homePage";
+@import "./layout/SiteNav";
+@import "./views/products";
+@import "./views/productDetails";
+@import "./views/footer";
+@import "./views/backtotop";
+@import "./views/about";
+@import "./common/mixins";
+@import "./common/variables";
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.index {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+}
+.btn {
+  background-color: $main-color;
+  border: 0;
+}
+.btn:hover {
+  background-color: white;
+  color: $main-color !important;
+}

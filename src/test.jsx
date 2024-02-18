@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -23,8 +22,8 @@ import ArabicTranslation from "./local/ar.json";
 import ShoppingCartProvider from './context/ShoppingCart';
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import SiteNav from './layout/SiteNav';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 i18n
   .use(initReactI18next)
@@ -88,7 +87,6 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
   <ShoppingCartProvider>
     <React.StrictMode>
       <RouterProvider router={router} />
@@ -103,8 +101,102 @@ root.render(
 // root.render(
 //   <React.StrictMode>
 //     <BrowserRouter>
+//     <ShoppingCartProvider>
 //       <App />
+//     </ShoppingCartProvider>
 //     </BrowserRouter>
 //   </React.StrictMode>
 // );
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useContext, useState } from 'react'
+import { createContext } from "react";
+
+const ShoppingCart = createContext({});
+
+
+const ShoppingCartProvider = ({ children }) => {
+const [cartItems, setCartItems] = useState([]);
+
+    const getItmesQuantity = (id) => {
+        return cartItems.find((item) => item.id === id)?.quantity || 1;
+    };
+    const increaseCartQuantity = (id) => {
+        setCartItems((currItmes) => {
+            if (currItmes.find((item) => item.id === id) == null) {
+                return [...currItmes, { id, quantity: 1 }];
+            } else {
+                return currItmes.map((item) => {
+                    if (item.id === id) {
+                        return { ...item, quantity: item.quantity + 1 };
+                    } else {
+                        return item;
+                    }
+                });
+            }
+        });
+    };
+
+    const decreaseCartQuantity = (id) => {
+        setCartItems((currItmes) => {
+            if (currItmes.find((item) => item.id === id) == null) {
+                return currItmes.filter((item) => item.id !== id);
+            } else {
+                return currItmes.map((item) => {
+                    if (item.id === id) {
+                        return { ...item, quantity: item.quantity - 1 };
+                    } else {
+                        return item;
+                    }
+                });
+            }
+        });
+    };
+
+    const removeCartItem = (id) => {
+        setCartItems((currItmes) => currItmes.filter((item) => item.id !== id))
+    };
+
+    return (
+        <ShoppingCart.Provider
+            value={{
+                cartItems,
+                getItmesQuantity,
+                increaseCartQuantity,
+                decreaseCartQuantity,
+                removeCartItem
+            }}>
+            {children}
+        </ShoppingCart.Provider>
+    )
+};
+
+export default ShoppingCartProvider;
+
+export const useShoppingCart = () => {
+    return useContext(ShoppingCartProvider);
+}

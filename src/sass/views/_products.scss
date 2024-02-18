@@ -1,0 +1,30 @@
+.viewMore {
+  text-transform: capitalize;
+  font-family: $second-font;
+  margin: 2rem auto;
+  width: min-content;
+  font-size: 0.7rem;
+}
+.viewMore:hover {
+  color: $main-color;
+}
+.product {
+  text-transform: capitalize;
+  padding-right: 2rem;
+  font-family: $main-font;
+}
+.product:hover {
+  color: $hover-color;
+  display: inline-block;
+  animation: pulse;
+  animation-duration: 1s;
+}
+
+.imageSize {
+  scale: 100%;
+}
+
+.Details {
+  // width: 50%;
+  margin: 0 auto;
+}

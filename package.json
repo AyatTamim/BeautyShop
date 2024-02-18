@@ -3,12 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.22.8",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "animate.css": "^4.1.1",
+    "axios": "^1.4.0",
+    "babel-install": "^2.1.0",
+    "bootstrap": "^5.2.3",
+    "i18next": "^23.8.3",
+    "json-server": "^1.0.0-alpha.23",
+    "jsx-tikzcd": "^0.5.1",
+    "react-bootstrap": "^2.7.4",
+    "react-i18next": "^14.0.5",
+    "react-latex": "^2.0.0",
+    "react-pdf": "^7.3.3",
+    "react-router-dom": "^6.13.0",
     "react-scripts": "5.0.1",
+    "react-tex": "^1.5.0",
+    "sass": "^1.62.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +50,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

@@ -1,0 +1,31 @@
+.cardStyle {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.Details {
+  z-index: 1;
+  color: white;
+}
+.Details:hover {
+  color: #fff !important;
+  border-color: #906 !important;
+  display: block !important;
+}
+.card-img-overlay {
+  opacity: 0;
+  transition: 0.3s;
+
+  .iconFont {
+    font-size: 1.5rem;
+  }
+}
+
+.card-img-overlay:hover {
+  opacity: 1;
+  background: #eabad538;
+}
+
+.test{
+  background-color: red;
+}
