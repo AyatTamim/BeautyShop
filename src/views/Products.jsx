@@ -28,7 +28,7 @@ export default function Products() {
   }
 
   let getCategories = () => {
-    fetch("http://localhost:2222/categories/").then(res => res.json().then((data) => setCategories(data)))
+    fetch("http://localhost:2222/categories").then(res => res.json().then((data) => setCategories(data)))
   }
 
   let productFilter = (category) => {
